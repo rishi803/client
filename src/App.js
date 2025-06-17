@@ -10,8 +10,9 @@ import './index.css';
 const socket = io(process.env.REACT_APP_API_URL, {
   transports: ['websocket', 'polling'],
   reconnection: true,
-  reconnectionAttempts: 5,
-  reconnectionDelay: 1000
+  reconnectionAttempts: 10, // Increased attempts
+  reconnectionDelay: 2000, // Longer delay
+  timeout: 20000 // Increased connection timeout
 });
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
       console.log('Socket cleanup');
     };
   }, []);
+
 
   return (
     <div className="p-4 max-w-6xl mx-auto">
