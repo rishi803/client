@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+DEPLOYED URL: https://citymall-meme-assignment-f2xl7hq3a.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Cybermeme Marketplace
 
-## Available Scripts
+A cyberpunk-themed meme auction platform built for Hackathon 2025, where users create, bid on, and vote for memes in a neon-drenched digital jungle. Powered by Supabase, Socket.IO, Google Gemini API, React, Tailwind, and late-night coding sprints.
 
-In the project directory, you can run:
+## Features
+- **Meme Creation**: Post memes with AI-generated captions and vibes via Google Gemini API (e.g., “This cat's portfolio is more volatile than a neon-lit back alley brawl”).
+- **Real-Time Updates**: Live meme, bid, and vote updates using Socket.IO.
+- **Bidding**: Bet fake credits on memes in a chaotic auction.
+- **Voting**: Upvote/downvote to climb the leaderboard.
+- **Leaderboard**: Tracks top 10 memes by upvotes.
+- **Cyberpunk UI**: Neon-glitchy design with terminal typing effect.
+- **User Toggle**: Switch between mock users (neonhacker, cybershadow) for demo.
+- **Image Upload Placeholder**: File input UI (upload coming soon).
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Tech Stack
+- **Frontend**: React 19, Tailwind CSS 3.4.17, Socket.IO-Client 4.8.1, Axios
+- **Backend**: Express 5.1.0, Supabase 2.45.4, Socket.IO 4.8.1, Google Gemini API 0.7.0
+- **Deployment**: Vercel (frontend), Render (backend)
+- **Tools**: Used Cursor to debug Socket.IO, Supabase, and Gemini API.
