@@ -8,13 +8,13 @@ function MemeCard({ meme, user, socket }) {
     e.preventDefault();
     if (!bid || bid <= 0) return alert('Enter a valid bid!');
     try {
-      await axios.post('http://localhost:5000/bids', {
-        meme_id: meme.id,
-        user,
-        credits: parseInt(bid)
-      });
-      setBid('');
-    } catch (err) {
+        await axios.post(`${process.env.REACT_APP_API_URL}/bids`, {
+          meme_id: meme.id,
+          user,
+          credits: parseInt(bid)
+        });
+        setBid('');
+      } catch (err) {
       console.error('Bid failed:', err.response?.data || err.message);
       alert('Bid failed!');
     }
@@ -22,7 +22,7 @@ function MemeCard({ meme, user, socket }) {
 
   const handleVote = async (type) => {
     try {
-      await axios.post(`http://localhost:5000/memes/${meme.id}/vote`, { type, user });
+      await axios.post(`${process.env.REACT_APP_API_URL}/memes/${meme.id}/vote`, { type, user });
     } catch (err) {
       console.error('Vote failed:', err.response?.data || err.message);
       alert('Vote failed!');

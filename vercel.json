@@ -1,6 +1,6 @@
 {
     "rewrites": [
-      { "source": "/api/(.*)", "destination": "https://your-render-backend.com/api/$1" },
+      { "source": "/api/(.*)", "destination": "https://cybermeme-market-backend.onrender.com/$1" },
       { "source": "/(.*)", "destination": "/index.html" }
     ]
   }

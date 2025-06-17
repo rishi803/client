@@ -7,7 +7,7 @@ import Leaderboard from './components/Leaderboard';
 import TerminalEffect from './components/TerminalEffect';
 import './index.css';
 
-const socket = io('http://localhost:5000', {
+const socket = io(process.env.REACT_APP_API_URL, {
   transports: ['websocket', 'polling'],
   reconnection: true,
   reconnectionAttempts: 5,
@@ -17,11 +17,11 @@ const socket = io('http://localhost:5000', {
 function App() {
   const [memes, setMemes] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
-  const [user] = useState('neonhacker');
+  const [user, setUser] = useState('neonhacker');
 
   useEffect(() => {
     // Fetch memes
-    axios.get('http://localhost:5000/memes')
+    axios.get(`${process.env.REACT_APP_API_URL}/memes`)
       .then((res) => {
         console.log('Fetched memes:', res.data);
         setMemes(res.data);
@@ -29,7 +29,7 @@ function App() {
       .catch((err) => console.error('Failed to fetch memes:', err.message));
 
     // Fetch leaderboard
-    axios.get('http://localhost:5000/leaderboard')
+    axios.get(`${process.env.REACT_APP_API_URL}/leaderboard`)
       .then((res) => {
         console.log('Fetched leaderboard:', res.data);
         setLeaderboard(res.data);

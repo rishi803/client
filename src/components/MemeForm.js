@@ -17,7 +17,7 @@ function MemeForm({ user }) {
     };
     console.log('Sending meme:', memeData); // Debug
     try {
-      const res = await axios.post('http://localhost:5000/memes', memeData);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/memes`, memeData);
       console.log('Meme created:', res.data); // Debug
       setTitle('');
       setImageUrl('');
